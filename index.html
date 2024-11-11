@@ -16,11 +16,18 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #121212;
+            background: linear-gradient(135deg, #121212, #1F1B24);
             color: #E0E0E0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            animation: backgroundAnimation 10s ease infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-color: #121212; }
+            50% { background-color: #1F1B24; }
+            100% { background-color: #121212; }
         }
 
         header {
@@ -50,6 +57,11 @@
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .seccion:hover {
+            transform: scale(1.02);
         }
 
         h2 {
@@ -75,6 +87,11 @@
         footer p {
             font-size: 14px;
         }
+
+        .icon {
+            margin-right: 10px;
+            color: #BB86FC;
+        }
     </style>
 </head>
 <body>
@@ -84,27 +101,27 @@
     </header>
 
     <div class="contenedor">
-        <h2>Lo sentimos, el lanzamiento se ha atrasado</h2>
+        <h2><i class="fas fa-exclamation-circle icon"></i>Lo sentimos, el lanzamiento se ha atrasado</h2>
         <p>Estamos trabajando arduamente para mejorar nuestra plataforma. Sin embargo, debido a ciertos imprevistos, el lanzamiento de las nuevas características se ha retrasado. Te agradecemos enormemente tu paciencia y comprensión mientras solucionamos estos problemas.</p>
        
         <section class="seccion">
-            <h2>¿Qué está pasando?</h2>
+            <h2><i class="fas fa-tools icon"></i>¿Qué está pasando?</h2>
             <p>Nuestro equipo ha encontrado desafíos técnicos que deben abordarse para garantizar la mejor calidad posible en el lanzamiento. Queremos que todo esté en su lugar antes de que se haga público.</p>
         </section>
 
         <section class="seccion">
-            <h2>¿Qué significa esto para ti?</h2>
+            <h2><i class="fas fa-clock icon"></i>¿Qué significa esto para ti?</h2>
             <p>El retraso significa que tendrás acceso a más funciones y mejoras cuando se complete el lanzamiento. Estamos comprometidos a ofrecerte la mejor experiencia posible, por lo que este tiempo adicional es crucial.</p>
         </section>
 
         <section class="seccion">
-            <h2>¿Cuándo puedes esperar el lanzamiento?</h2>
+            <h2><i class="fas fa-calendar-alt icon"></i>¿Cuándo puedes esperar el lanzamiento?</h2>
             <p>Estamos trabajando en un nuevo cronograma y te mantendremos informado sobre el avance. Tu apoyo es invaluable y te agradecemos por acompañarnos en este proceso.</p>
         </section>
     </div>
 
     <footer>
-        <p>© 2024 Alya - Control de Aula Inteligente</p>
+        <p>© 2024 Alya - Tu IA Profesional</p>
     </footer>
 
     <script>
